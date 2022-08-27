@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Scope</title>
+    <script src="externalJs.js">
+        //var counter =300;
+       // var counter =200;//Globle scope
+    </script>
+</head>
+<body>
+    <script>
+        //var counter = 100; //Globle scope
+        console.log("Before the function "+counter);
+
+        function SomeFunction()
+        {
+            var counter = 10; // Local Scope
+            counter = counter + 1;
+            console.log("inside function : "+ counter);
+        }
+        SomeFunction();
+
+        console.log("After the function "+counter);
+    </script>
+    <script>
+        console.log("Another Script Tag "+counter);
+    </script>
+</body>
+</html>

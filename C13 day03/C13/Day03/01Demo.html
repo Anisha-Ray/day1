@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        //Literal Syntax
+        var Employee = {
+                        EId : 100,
+                        EName : "Mugdha Panhale",
+                        Dept : "IT",
+                        address : {
+                            laneNo : "lane no 2",
+                            city : "Pune",
+                            Pin : 4111001
+                        } ,
+                        getEmployeeDeatils : function()
+                                                {
+                                                    console.log(this.EId+"\n"+this.EName+
+                                                    "\n"+this.Dept+"\n"+this.address.laneNo+
+                                                    "\n"+this.address.city+"\n"+this.address.Pin);
+                                                }
+                };
+
+
+    //-----------------for-in loop-------------------------
+    for(var key in Employee)
+    {
+        // debugger;
+        // if('address' === Employee[key])
+        // {
+            
+        //     for(var k in Employee.address)
+        //     {
+        //         console.log(k +"  "+Employee.address[k]);
+        //     }
+        // }
+        console.log(key +"  "+Employee[key]);
+        
+    }
+    
+    //var emp1 = Employee; //emp1is an object of type Employee
+    //emp1.getEmployeeDeatils();  
+
+    // var emp2 = Employee;   
+    // emp2.Dept = 50;
+    // emp2.EName = "Jack Sparrow";
+    // emp2.getEmployeeDeatils();  
+    
+    // var emp3 = Employee;
+    // emp3.getEmployeeDeatils();
+
+   // console.log(Employee["EName"]);
+   //console.log(Employee["address"]["city"]);
+
+    // Employee.Desg = "Trainer";
+    // console.log(Employee.Desg);
+    // Employee.getEmployeeDeatils();
+
+    // delete Employee.EName;
+    // Employee.getEmployeeDeatils();
+    // Employee.EName = "abc";
+    // Employee.getEmployeeDeatils();
+
+    
+
+
+    </script>
+</body>
+</html>

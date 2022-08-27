@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Clousers</title>
+</head>
+<body>
+   <script>
+    
+    var getEmployee = (function Parent()
+                    {
+                        // if child function is dependent on paraent member
+                        // it keeps that member alive in merory for that child function usage.
+                        var counter = 0;
+                        return function generateEmployeeId() // Inline Child Function.
+                        {
+                            counter = counter + 1;
+                            return "EmpId - " +counter;
+                        };
+                    })();
+    
+    console.log(getEmployee());//1
+    console.log(getEmployee());//2
+    console.log(getEmployee());//3
+    console.log(getEmployee());//4
+
+    // var getCount = (function Parent()
+    //                 {
+    //                     // if child function is dependent on paraent member
+    //                     // it keeps that member alive in merory for that child function usage.
+    //                     var counter = 0;
+    //                     return function ChildFunc_IncreaseConter() // Inline Child Function.
+    //                     {
+    //                         counter = counter + 1;
+    //                         return counter;
+    //                     };
+    //                 })();
+    
+    // console.log(getCount());//1
+    // console.log(getCount());//2
+    // console.log(getCount());//3
+    // console.log(getCount());//4
+
+    //-------------------------------------------
+    // var getSomeFunctionMe = function()
+    //                         {
+    //                             return function SayHi()
+    //                                             {
+    //                                                 console.log("Hi...Hello");
+    //                                             };
+    //                         }();
+    // getSomeFunctionMe();
+
+    // var getSomeFunctionMe = function SayHi()
+    //                                             {
+    //                                                 console.log("Hi...");
+    //                                             };
+                            
+   // getSomeFunctionMe();
+    
+    //-------------------------------------------
+    // function getSomeFunctionMe()
+    // {
+    //     return 
+    // }
+
+    // var Hi = function SayHi()
+    //                     {
+    //                         console.log("Hi");
+    //                     };
+    // Hi();
+    // //----------------------------------------
+    // function getSomeFunctionMe()
+    // {
+    //     return function SayHi()
+    //                     {
+    //                         console.log("Hi");
+    //                     };
+    // }
+
+    // var Hi = getSomeFunctionMe();
+    // Hi();
+   </script> 
+</body>
+</html>

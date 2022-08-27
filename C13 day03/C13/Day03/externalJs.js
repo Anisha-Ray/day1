@@ -1,0 +1,1 @@
+var counter =300; //Globle scope

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSfunction</title>
+</head>
+<body>
+    <input type="text" id="txt1"/><br/><br/>
+    <input type="text" id="txt2"/><br/><br/>
+    <button onclick="Show()">Show Data</button>
+    <button onclick="alert('Hello !!!')">Alert</button>
+    <script>
+        function Show()
+        {
+            refTotxt1 = document.getElementById("txt1");
+            var inputtxt1 = refTotxt1.value;
+            refTotxt2 = document.getElementById("txt2");
+            refTotxt2.value = inputtxt1;
+        }
+
+        function SayHi()
+        {
+            console.log("Hello");
+        }
+        SayHi();
+
+        var Display = function ()
+                        {
+                            console.log("Hi from Display function");
+                        };
+        Display();
+
+        function F1()
+        {
+            return function()
+                        {
+                            console.log("returning something from F1()");
+                        };
+        }
+        var returnedFunc = F1();
+        returnedFunc();
+    </script>
+</body>
+</html>
